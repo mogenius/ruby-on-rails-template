@@ -2,12 +2,11 @@ FROM ruby:3.0.5
 
 WORKDIR /app
 
-COPY Gemfile .
+# COPY Gemfile .
+COPY . .
 
 RUN gem install bundler
 RUN bundle install
-
-COPY . .
 
 EXPOSE 3000
 
